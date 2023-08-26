@@ -1,0 +1,61 @@
+.inpt{
+	/*float:left;*/
+	margin-right:20px;
+}
+
+.check-block, .radio-block{
+	margin-right:10px;
+	height:auto;
+	overflow:hidden;	
+	float:left;
+}
+
+label{
+	width:auto;
+	/*float:left;*/
+}
+
+.check-block label, .radio-block label{
+	width:15px;
+	height:15px;
+	border:#ccc solid thin;
+	display:block;
+	content:" ";
+	position:relative;
+	float:left;
+	cursor:pointer;
+}
+
+.check-block label{
+	border-radius:3px;
+}
+
+.radio-block label{
+	border-radius:50%;	
+}
+
+.check-block input, .radio-block input{
+	margin-left:-30px;	
+	float:left;
+}
+
+.check-block input:checked + label{
+	background:#336699 url(../images/check-img.png) no-repeat center;
+	border-color:#244a70;	
+}
+
+.radio-block input:checked + label{
+	border-color:#244a70;
+}
+
+.radio-block input:checked + label::after{
+	width:9px;
+	height:9px;
+	position:absolute;
+	left:3px;
+	top:3px;
+	border-radius:50%;
+	background:#336699;
+	content:" ";
+
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head id="ctl00_Head1">
+    <title>Marwadi University</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min_1.10.3.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/style0713.css?Str=2306200113" rel="stylesheet" type="text/css" />
+    <link href="font/font.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <style>
+        .mt {
+            margin-top: 10px;
+        }
+
+        .mt2x {
+            margin-top: 30px;
+        }
+
+        #bus_pass_bg {
+            background-image: url("font/buspsbg.png");
+            background-size: 150%;
+            
+        }
+
+        .back_btn {
+            display: table-cell;
+
+        }
+       
+        .bustt {
+            text-align: center;
+            color: aliceblue;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            /* position: fixed; */
+
+        }
+
+        .bak {
+            padding-top: 10%;
+            padding-bottom: 10%;
+            width: 50px;
+        }
+
+		.btn2{
+		    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.7rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	color: #fff;
+    background-color: #01A9B4;
+    border-color: #01A9B4;
+	width: 100%
+	}
+
+    </style>
+</head>
+
+<body id="ctl00_masterBody" class="inner-page attendance-page">
+
+<div class="container alert alert-danger mt2x" id="alt" role="alert">
+    * This bus pass is simply your Reference.<br>
+    * The bus pass does not show up in the Marwari server <br>
+    * Use your own risk
+</div>
+<div class="container" id="edit">
+
+    <div class="mb-3">
+        <label class="form-label ">GR Number</label>
+        <input type="number" class="form-control " maxlength=6 id="grnum" placeholder="11XXXX">
+    </div>
+
+    <div class="mb-3 mt ">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" placeholder="XXXXX X. XXXXX" id="fname">
+    </div>
+
+    <label class="form-label mt">Choose Your Pick Up Point:</label>
+    <div class="mb-3">
+        <input type="text" list="pickUp" class="form-control" id="pickUps" placeholder="Enter Here Pick Up Point" />
+        <datalist id="pickUp">
+            <option value="Ahir Chowk">Ahir Chowk</option>
+            <option value="Airport Fatak">Airport Fatak</option>
+            <option value="Aji Dam">Aji Dam</option>
+            <option value="Alap Avenue">Alap Avenue</option>
+            <option value="Alap Green City">Alap Green City</option>
+            <option value="Alap Heritage">Alap Heritage</option>
+            <option value="Ambaji Kadva Chowk">Ambaji Kadva Chowk</option>
+            <option value="Ambedkar Nagar Chowk">Ambedkar Nagar Chowk</option>
+            <option value="Ambedkar Nagar Gate">Ambedkar Nagar Gate</option>
+            <option value="Amrapali Bridge">Amrapali Bridge</option>
+            <option value="Amul Chowk">Amul Chowk</option>
+            <option value="Amul Parlour">Amul Parlour</option>
+            <option value="Anand Bunglow Chowk">Anand Bunglow Chowk</option>
+            <option value="Ashapura Temple (Palace Road)">Ashapura Temple (Palace Road)</option>
+            <option value="Astha Residency">Astha Residency</option>
+            <option value="Astron Chowk">Astron Chowk</option>
+            <option value="Atithi Appartment">Atithi Appartment</option>
+            <option value="Atmiya College">Atmiya College</option>
+            <option value="Avantika Park">Avantika Park</option>
+            <option value="Ayodhya Chowk">Ayodhya Chowk</option>
+            <option value="Bade Balaji (Kothariya Main Road)">Bade Balaji (Kothariya Main Road)</option>
+            <option value="Bahumali Bhavan">Bahumali Bhavan</option>
+            <option value="Bajarang Wadi Road Start">Bajarang Wadi Road Start</option>
+            <option value="Balaji Hall">Balaji Hall</option>
+            <option value="Bapa Sitaram Chowk">Bapa Sitaram Chowk</option>
+            <option value="Bapa Sitaram Chowk (Mavdi)">Bapa Sitaram Chowk (Mavdi)</option>
+            <option value="Bhaktinagar Circle">Bhaktinagar Circle </option>
+            <option value="Bhutkhana Chowk (Nr.Petrol Pump)">Bhutkhana Chowk (Nr.Petrol Pump)</option>
+            <option value="Big Bazaar">Big Bazaar</option>
+            <option value="Brahmani Hall">Brahmani Hall</option>
+            <option value="Brahmsamaj (Raiya Road)">Brahmsamaj (Raiya Road)</option>
+            <option value="Chaudhari High School">Chaudhari High School</option>
+            <option value="Chetan Hardware (Kenal Road)">Chetan Hardware (Kenal Road)</option>
+            <option value="Chunarwad Chowk">Chunarwad Chowk</option>
+            <option value="Corporation Chowk">Corporation Chowk</option>
+            <option value="Corporation Office, Bhavnagar Road">Corporation Office, Bhavnagar Road</option>
+            <option value="DK Hanuman, Pedak Road">DK Hanuman, Pedak Road</option>
+            <option value="Darshan Park">Darshan Park</option>
+            <option value="Delux Chowk">Delux Chowk</option>
+            <option value="Devpara Fire Station">Devpara Fire Station</option>
+            <option value="Dhanlaxmi Dairy">Dhanlaxmi Dairy</option>
+            <option value="Dhebar Fatak">Dhebar Fatak</option>
+            <option value="Dhrol - Bus Stand">Dhrol - Bus Stand</option>
+            <option value="Dhrol - Chouki Dhani">Dhrol - Chouki Dhani</option>
+            <option value="Dhrol - Court">Dhrol - Court</option>
+            <option value="Dhrol - Gandhi Chowk">Dhrol - Gandhi Chowk</option>
+            <option value="Dhrol - Padadhri">Dhrol - Padadhri</option>
+            <option value="Dhrol - Trikoniya">Dhrol - Trikoniya</option>
+            <option value="Diwanpara Police Chowki (Bhupendra Road)">Diwanpara Police Chowki (Bhupendra Road)
+            </option>
+            <option value="Doshi Hospital">Doshi Hospital</option>
+            <option value="Forensic Lab">Forensic Lab</option>
+            <option value="Gangotri Dairy">Gangotri Dairy</option>
+            <option value="Ghanteshwar">Ghanteshwar</option>
+            <option value="Gokheshwar Temple">Gokheshwar Temple</option>
+            <option value="Gondal - Aashapura Garden">Gondal - Aashapura Garden</option>
+            <option value="Gondal - Akshar Mandir">Gondal - Akshar Mandir</option>
+            <option value="Gondal - Alakh Hanuman">Gondal - Alakh Hanuman</option>
+            <option value="Gondal - Bus Stand">Gondal - Bus Stand</option>
+            <option value="Gondal - College Chowk">Gondal - College Chowk</option>
+            <option value="Gondal - Dasi Jivan Partyplot">Gondal - Dasi Jivan Partyplot</option>
+            <option value="Gondal - Jail Chowk">Gondal - Jail Chowk</option>
+            <option value="Gondal - Khodiyar Petrol Pump">Gondal - Khodiyar Petrol Pump</option>
+            <option value="Gondal - Ram Petrolpump">Gondal - Ram Petrolpump</option>
+            <option value="Gondal - Ribda">Gondal - Ribda</option>
+            <option value="Gondal - Shapar">Gondal - Shapar</option>
+            <option value="Gondal - Trikoniya">Gondal - Trikoniya</option>
+            <option value="Gopal Chowk">Gopal Chowk</option>
+            <option value="Govardhan Chowk">Govardhan Chowk</option>
+            <option value="Green Land Chokdi">Green Land Chokdi</option>
+            <option value="Gunatitnagar Chowk">Gunatitnagar Chowk</option>
+            <option value="Gundawadi Police chowki">Gundawadi Police chowki</option>
+            <option value="Guru Govind Wadi">Guru Govind Wadi</option>
+            <option value="Guruprasad Chowk">Guruprasad Chowk</option>
+            <option value="Gymkhana Office">Gymkhana Office</option>
+            <option value="HP Petrol Pump">HP Petrol Pump</option>
+            <option value="Hanuman Madhi Chowk">Hanuman Madhi Chowk</option>
+            <option value="Haribhai Hall">Haribhai Hall</option>
+            <option value="Haridhava Chowk">Haridhava Chowk</option>
+            <option value="Haridwar Heights">Haridwar Heights</option>
+            <option value="Hemu Gadhvi Hall">Hemu Gadhvi Hall</option>
+            <option value="Hirapanna Complex">Hirapanna Complex</option>
+            <option value="Hudko Police Chowki">Hudko Police Chowki</option>
+            <option value="Indira Circle">Indira Circle</option>
+            <option value="Jakat Naka Jamnagar Road">Jakat Naka Jamnagar Road</option>
+            <option value="Jakat Naka, Gondal Road">Jakat Naka, Gondal Road</option>
+            <option value="Jalaram Chowk">Jalaram Chowk</option>
+            <option value="Jaljit Hall">Jaljit Hall</option>
+            <option value="Jam Tower">Jam Tower</option>
+            <option value="Jasdan - Atkot">Jasdan - Atkot</option>
+            <option value="Jasdan - Civil hospital">Jasdan - Civil hospital/option>
+            <option value="Jasdan - Court">Jasdan - Court</option>
+            <option value="Jasdan - CourtJasdan - New Bus Stand">Jasdan - CourtJasdan - New Bus Stand </option>
+            <option value="Jasdan - Halenda">Jasdan - Halenda</option>
+            <option value="Jasdan - New Bus Stand">Jasdan - New Bus Stand</option>
+            <option value="Jasdan - Old Bus stand">Jasdan - Old Bus stand </option>
+            <option value="Jasdan - Sardhar">Jasdan - Sardhar</option>
+            <option value="Jasdan - Taluka Panchayat">Jasdan - Taluka Panchayat</option>
+            <option value="Jasdan - Tramba">Jasdan - Tramba</option>
+            <option value="Jasdan - TrambaJasdan - Sardhar">Jasdan - TrambaJasdan - Sardhar</option>
+            <option value="Jasdan - Virnagar">Jasdan - Virnagar</option>
+            <option value="Jilla Garden Chowk (Kenal Road)">Jilla Garden Chowk (Kenal Road)</option>
+            <option value="Jilla Panchayat Chowk">Jilla Panchayat Chowk</option>
+            <option value="Jubilee Garden">Jubilee Garden</option>
+            <option value="Junction Police Chowki">Junction Police Chowki</option>
+            <option value="Jyotinagar Chowk">Jyotinagar Chowk</option>
+            <option value="KKV Hall">KKV Hall</option>
+            <option value="Karansinhji Balaji Temple (Bhupendra Road)">Karansinhji Balaji Temple (Bhupendra Road)
+            </option>
+            <option value="Kasturi Aviary">Kasturi Aviary</option>
+            <option value="Katariya Showroom">Katariya Showroom</option>
+            <option value="Kedar Gate">Kedar Gate</option>
+            <option value="Khodal Chowk">Khodal Chowk</option>
+            <option value="Kishanpara">Kishanpara</option>
+            <option value="Kolsawadi">Kolsawadi</option>
+            <option value="Kotecha Chowk">Kotecha Chowk</option>
+            <option value="Kothariya Circle">Kothariya Circle</option>
+            <option value="Lakh no Bunglow">Lakh no Bunglow</option>
+            <option value="Lalpark">Lalpark</option>
+            <option value="Laxminagar PGVCL">Laxminagar PGVCL</option>
+            <option value="Laxminagar Road Start">Laxminagar Road Start</option>
+            <option value="MEFGI Campus">MEFGI Campus</option>
+            <option value="MSFL HO">MSFL HO</option>
+            <option value="MSFL HOMEFGI Campus">MSFL HOMEFGI Campus</option>
+            <option value="Madhapar Bridge">Madhapar Bridge</option>
+            <option value="Madhapar Bus Stop">Madhapar Bus Stop</option>
+            <option value="Madhapar Chowk">Madhapar Chowk</option>
+            <option value="Mahesh Vijay Dairy (Kenal Road)">Mahesh Vijay Dairy (Kenal Road)</option>
+            <option value="Malaviya Chowk">Malaviya Chowk</option>
+            <option value="Manmohan Marble (Jamnagar Road)">Manmohan Marble (Jamnagar Road)</option>
+            <option value="Maruti Nagar Chowk">Maruti Nagar Chowk</option>
+            <option value="Maruti Service Station">Maruti Service Station</option>
+            <option value="Marwadi Willa">Marwadi Willa</option>
+            <option value="Masoom School">Masoom School</option>
+            <option value="Matuki Restaurent">Matuki Restaurent</option>
+            <option value="Mavdi Chowk">Mavdi Chowk</option>
+            <option value="Mavdi Fire Station">Mavdi Fire Station</option>
+            <option value="Mayani Chowk">Mayani Chowk</option>
+            <option value="Modi School">Modi School</option>
+            <option value="Mokaji Circle">Mokaji Circle</option>
+            <option value="Morbi - Aaswad Pan">Morbi - Aaswad Pan</option>
+            <option value="Morbi - Avani Chowk">Morbi - Avani Chowk</option>
+            <option value="Morbi - Avenue Park">Morbi - Avenue Park</option>
+            <option value="Morbi - Bhaktinagar Circle">Morbi - Bhaktinagar Circle</option>
+            <option value="Morbi - Darbargadh Pull (Bapuno Bavlo)">Morbi - Darbargadh Pull (Bapuno Bavlo)</option>
+            <option value="Morbi - GIDC">Morbi - GIDC</option>
+            <option value="Morbi - Genda Circel">Morbi - Genda Circel</option>
+            <option value="Morbi - Housing Board (sanala road)">Morbi - Housing Board (sanala road)</option>
+            <option value="Morbi - Kamdhenu Party Plot">Morbi - Kamdhenu Party Plot</option>
+            <option value="Morbi - Kenal (Umiya Circle)">Morbi - Kenal (Umiya Circle)</option>
+            <option value="Morbi - Lajai Chowk">Morbi - Lajai Chowk</option>
+            <option value="Morbi - Maheshwari Medical">Morbi - Maheshwari Medical</option>
+            <option value="Morbi - Natraj">Morbi - Natraj</option>
+            <option value="Morbi - New Bus Stand">Morbi - New Bus Stand</option>
+            <option value="Morbi - Old Bus Stand">Morbi - Old Bus Stand</option>
+            <option value="Morbi - Om Shoping Center">Morbi - Om Shoping Center </option>
+            <option value="Morbi - Patel Wadi">Morbi - Patel Wadi</option>
+            <option value="Morbi - Post Office">Morbi - Post Office</option>
+            <option value="Morbi - Prakash Pan">Morbi - Prakash Pan</option>
+            <option value="Morbi - Railway Station Chowk">Morbi - Railway Station Chowk</option>
+            <option value="Morbi - Sanala">Morbi - Sanala</option>
+            <option value="Morbi - Sardarbag">Morbi - Sardarbag</option>
+            <option value="Morbi - Somnath Tower">Morbi - Sardarbag</option>
+            <option value="Morbi - Swagat Hall">Morbi - Swagat Hall</option>
+            <option value="Morbi - Tankara Chowk">Morbi - Tankara Chowk</option>
+            <option value="Morbi - Thacker Lodge">Morbi - Thacker Lodge</option>
+            <option value="Morbi - VC High school">Morbi - VC High school</option>
+            <option value="Morbi - Vavdi Chowk">Morbi - Vavdi Chowk</option>
+            <option value="Morbi - Virpar">Morbi - Virpar</option>
+            <option value="Morbi Road Jakat Naka">Morbi Road Jakat Naka</option>
+            <option value="Moti Tanki Chowk">Moti Tanki Chowk</option>
+            <option value="Munjka Circle (150 ft rd 2)">Munjka Circle (150 ft rd 2)</option>
+            <option value="Nageshwar Temple (JNR Road)">Nageshwar Temple (JNR Road)</option>
+            <option value="Nanavati Chowk">Nanavati Chowk</option>
+            <option value="Nanda Hall">Nanda Hall</option>
+            <option value="Nateshwar Temple">Nateshwar Temple</option>
+            <option value="Navjivan School">Navjivan School</option>
+            <option value="Navnit Hall">Navnit Hall</option>
+            <option value="Nil-da Dhaba">Nil-da Dhaba</option>
+            <option value="Nilkanth Cinema">Nilkanth Cinema</option>
+            <option value="Nirmala Convent School">Nirmala Convent School</option>
+            <option value="Nirmala Fire Station">Nirmala Fire Station</option>
+            <option value="Om Nagar Chowk">Om Nagar Chowk</option>
+            <option value="Oscar Tower">Oscar Tower</option>
+            <option value="PDM College">PDM College</option>
+            <option value="Pacific IceCream">Pacific IceCream</option>
+            <option value="Panchayat Chowk">Panchayat Chowk</option>
+            <option value="Panchvati Hall">Panchvati Hall</option>
+            <option value="Parimal Chowk">Parimal Chowk</option>
+            <option value="Parshuram Circle (150 ft rd 2)">Parshuram Circle (150 ft rd 2)</option>
+            <option value="Patel Bhel">Patel Bhel</option>
+            <option value="Patel Dairy (Kidvai Nagar)">Patel Dairy (Kidvai Nagar)</option>
+            <option value="Patel Pan (Sahkar Main Road)">Patel Pan (Sahkar Main Road)</option>
+            <option value="Patel Wadi">Patel Wadi</option>
+            <option value="Patidar Chowk">Patidar Chowk</option>
+            <option value="PopatPara Jail">PopatPara Jail</option>
+            <option value="Popatpara Under Bridge">Popatpara Under Bridge</option>
+            <option value="Praduman Lords Hotel">Praduman Lords Hotel</option>
+            <option value="Punit Nagar Society">Punit Nagar Society</option>
+            <option value="Punit Water Tank">Punit Water Tank</option>
+            <option value="Puskar Dham">Puskar Dham</option>
+            <option value="R World">R World</option>
+            <option value="Radhe Krishna Temple">Radhe Krishna Temple</option>
+            <option value="Rail Nagar Road Start">Rail Nagar Road Start</option>
+            <option value="Raiya Circle">Raiya Circle</option>
+            <option value="Raiya Tele. Exchange">Raiya Tele. Exchange</option>
+            <option value="Raiya gam Circle">Raiya gam Circle</option>
+            <option value="Raj Nagar Chowk">Raj Nagar Chowk</option>
+            <option value="Raj Palace">Raj Palace</option>
+            <option value="Raj Pan, Kuvadava Road">Raj Pan, Kuvadava Road</option>
+            <option value="Ramapir Chowk">Ramapir Chowk</option>
+            <option value="Ramdev Temple">Ramdev Temple</option>
+            <option value="Ramkrupa Dairy">Ramkrupa Dairy</option>
+            <option value="Ramnath Para Police Chowki">Ramnath Para Police Chowki</option>
+            <option value="Ramnath Para Police ChowkiJilla Garden Chowk (Kenal Road)">Ramnath Para Police
+                ChowkiJilla Garden
+                Chowk (Kenal Road)</option>
+            <option value="Ranchhod Das Asram">Ranchhod Das Asram</option>
+            <option value="Rani Tower">Rani Tower</option>
+            <option value="Ranuja Temple">Ranuja Temple</option>
+            <option value="Rokadiya Chowk">Rokadiya Chowk</option>
+            <option value="Ruda - 2 Gate">Ruda - 2 Gate</option>
+            <option value="SNK School">SNK School</option>
+            <option value="SRP Camp (150 ft rd 2)">SRP Camp (150 ft rd 2)</option>
+            <option value="Sadguru Complex">Sadguru Complex</option>
+            <option value="Sadguru Complex (Sant kabir Road)">Sadguru Complex (Sant kabir Road)</option>
+            <option value="Sadguru Tirthdham">Sadguru Tirthdham</option>
+            <option value="Sadhu Vasvani School">Sadhu Vasvani School</option>
+            <option value="Sandiya Pull">Sandiya Pull</option>
+            <option value="Sanskar City (MAVDI)">Sanskar City (MAVDI)</option>
+            <option value="Santosh Dairy">Santosh Dairy</option>
+            <option value="Satelite Chowk">Satelite Chowk</option>
+            <option value="Satyam Park">Satyam Park</option>
+            <option value="Satysai Heart Hospital">Satysai Heart Hospital</option>
+            <option value="Satysai Road Start">Satysai Road Start</option>
+            <option value="Sau. University Gate (University Road)">Sau. University Gate (University Road)</option>
+            <option value="Saurashtra University Gate">Saurashtra University Gate</option>
+            <option value="Shashtri Nagar Gate">Shashtri Nagar Gate</option>
+            <option value="Sheetal Park">Sheetal Park</option>
+            <option value="Shell Petrol Pump, Kunvadva Road">Shell Petrol Pump, Kunvadva Road</option>
+            <option value="Sheth High School">Sheth High School</option>
+            <option value="Shilpan Onyx">Shilpan Onyx</option>
+            <option value="Shivaji Udhyan">Shivaji Udhyan</option>
+            <option value="Shivalay Chowk">Shivalay Chowk</option>
+            <option value="Shree Ram Fruit Corner, Jagnath">Shree Ram Fruit Corner, Jagnath</option>
+            <option value="Shyamal Sky Life">Shyamal Sky Life</option>
+            <option value="Someshwar Temple (Kidvainagar)">Someshwar Temple (Kidvainagar)</option>
+            <option value="Sopan Habitat">Sopan Habitat</option>
+            <option value="Sorthiyawadi Circle">Sorthiyawadi Circle</option>
+            <option value="Speed Well Party Plot">Speed Well Party Plot</option>
+            <option value="Star Resedency">Star Resedency</option>
+            <option value="Sukh Sagar Chowk">Sukh Sagar Chowk</option>
+            <option value="Suman Bajaj">Suman Bajaj</option>
+            <option value="Sun City Appartment">Sun City Appartment</option>
+            <option value="Swaminarayan Chowk">Swaminarayan Chowk</option>
+            <option value="Swaminarayan Dairy (sahkar Main Road)">Swaminarayan Dairy (sahkar Main Road)</option>
+            <option value="Swaminarayan Gurukul (Back Side)">Swaminarayan Gurukul (Back Side)</option>
+            <option value="Swaminarayan Temple">Swaminarayan Temple</option>
+            <option value="Swaminarayan Temple (Bhupendra Raod)">Swaminarayan Temple (Bhupendra Raod)</option>
+            <option value="Trikon Bag">Trikon Bag</option>
+            <option value="Trishul Chowk">Trishul Chowk</option>
+            <option value="Triveni Gate">Triveni Gate</option>
+            <option value="Umiya Chowk">Umiya Chowk</option>
+            <option value="Vimal Nagar">Vimal Nagar</option>
+            <option value="Virani Chowk">Virani Chowk</option>
+            <option value="Vishnu Vihar">Vishnu Vihar</option>
+            <option value="Vrundavan Dairy">Vrundavan Dairy</option>
+            <option value="Wankaner - Amarser Fatak">Wankaner - Amarser Fatak</option>
+            <option value="Wankaner - Arni Timba Patiya">Wankaner - Arni Timba Patiya</option>
+            <option value="Wankaner - Arogyanagar Chowk">Wankaner - Arogyanagar Chowk</option>
+            <option value="Wankaner - Highway Jakatnaka">Wankaner - Highway Jakatnaka</option>
+            <option value="Wankaner - Jadeshwar Chamber">Wankaner - Jadeshwar Chamber</option>
+            <option value="Wankaner - Market Chowk">Wankaner - Market Chowk</option>
+            <option value="Wankaner - Pach Dwarka">Wankaner - Pach Dwarka</option>
+            <option value="Wankaner - Panchasar">Wankaner - Panchasar</option>
+            <option value="Wankaner - Patel Wadi (Highway)">Wankaner - Patel Wadi (Highway)</option>
+            <option value="Wankaner - Pipadiya Raj">Wankaner - Pipadiya Raj</option>
+            <option value="Wankaner - Rajkot Road Jakat Naka">Wankaner - Rajkot Road Jakat Naka</option>
+            <option value="Wankaner - Statue">Wankaner - Statue</option>
+            <option value="Wankaner - Taluka Sevasadan">Wankaner - Taluka Sevasadan</option>
+            <option value="Wankaner - Tithva Patiya">Wankaner - Tithva Patiya</option>
+            <option value="Water Pumping Station">Water Pumping Station</option>
+            <option value="Zade Blue Showroom">Zade Blue Showroom</option>
+        </datalist>
+    </div>
+
+    <div class="mb-3 mt">
+        <label class="form-label">Stream</label>
+        <input type="text" class="form-control" placeholder="IT/CE/CIVIL-FOT1 (MU/GTU)" id="Stream">
+    </div>
+
+    <div class="bm-3 mt">
+        <label class="form-label">Semester</label>
+        <select class="form-select form-control" id="sems">
+            <option selected value="SEM-1">SEM-1</option>
+            <option value="SEM-2">SEM-2</option>
+            <option value="SEM-3">SEM-3</option>
+            <option value="SEM-4">SEM-4</option>
+            <option value="SEM-5">SEM-5</option>
+            <option value="SEM-6">SEM-6</option>
+            <option value="SEM-7">SEM-7</option>
+            <option value="SEM-8">SEM-8</option>
+        </select>
+    </div>
+
+    <div class="mb-3 mt">
+        <label class="form-label mt-3">Mobile Number</label>
+        <input type="number" class="form-control" id="mobnum" maxlength="10" placeholder="99XXXXXXXX">
+    </div>
+
+
+
+    <div class="bm-3 mt">
+        <label class="form-label">Shift</label>
+        <select class="form-select form-control" id="Shift">
+            <option selected value="Shift - 1 (Pick Up)">Shift - 1 (Pick Up)</option>
+            <option value="Shift - 2 (Pick Up)">Shift - 2 (Pick Up)</option>
+            <option value="Shift - 3 (Pick Up)">Shift - 3 (Pick Up)</option>
+        </select>
+    </div>
+
+
+    <button type="button" onclick="Variable()" class="btn2 mt2x btn-primary" >Generate</button>
+
+
+</div>
+
+<div id="bus_pass_bg" style="margin-top: 0px;">
+    <h3 class="bustt">Bus Pass</h3>
+</div>
+
+
+<div id="bus_pass">
+    <!-- bus Pass -->
+</div>
+
+<script>
+
+        function Variable() {
+            document.getElementById("edit").style.display = "none";
+            document.getElementById("bus_pass").style.display = "block";
+            document.getElementById("bus_pass_bg").style.display = "block";
+            document.getElementById("alt").style.display = "none";
+            var grnum = document.getElementById("grnum").value;
+            var fname = document.getElementById("fname").value;
+            var Stream = document.getElementById("Stream").value;
+            var sems = document.getElementById("sems").value;
+            var mobnumt = document.getElementById("mobnum").value;
+            var grnum = document.getElementById("grnum").value;
+            var Shift = document.getElementById("Shift").value;
+            var pickUp = document.getElementById("pickUps").value;
+            let ok = '<div class="wrapper"><div id="main-content"><div class="col-md-12"><div class="container min-height"><div class="breadcrums"><ul><li><a href="javascript:void(0);">Bus Pass</a></li></ul></div><div class="col-md-12 heading"><h2>Bus Pass</h2></div><div class="clear"></div><div class="col-md-12 bus-pass-all-details"><div class="bus-pass-design clearfix S1"><div class="pass-img"><div class="stdnt-img-inr" id="getimage"><img id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_imgPerson" src="https://student.marwadiuniversity.ac.in:553/handler/getImage.ashx?SID=' + grnum + '" style="border-width:0px;" /></div></div><div class="pass-row stdnt-name"><h3><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblStudentName">' + fname.toUpperCase() + '</span></h3></div><div class="pass-row"><div class="row-label">GR No</div><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblGrNo" class="row-data">' + grnum + '</span></div><div class="pass-row"><div class="row-label">Stream </div><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblStreamName" class="row-data">' + Stream.toUpperCase() + '<!-- Stream --></span></div><div class="pass-row"><div class="row-label">Sem </div><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblSemesterName"class="row-data">' + sems + '<!-- Sem --></span></div><div class="pass-row"><div class="row-label">Mobile No.</div><spanid="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lbllMobileNo" class="row-data">' + mobnumt + '<!-- Mobile No  --></span></div><div class="pass-row"><div class="row-label">Pick-up</div><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblStationName" class="row-data">' + pickUp + '<!-- Pick-up --></span></div><div class="pass-row"><div class="row-label">Date Time</div><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lbldate" class="row-data"><!-- Time --></span><span class="row-data" id="lblTime"></span></div><div class="pass-row pass-shift"><div class="row-label">Shift</div><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblShiftName" class="row-data">' + Shift + '<!-- Shift --></span><span id="ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lblBusPassStatus"></span></div></div></div></div></div></div>';
+            document.getElementById("bus_pass").innerHTML = ok;
+            const d = new Date();
+            let text = d.toLocaleDateString("en-GB");
+            document.getElementById("ctl00_ContentPlaceHolder1_rptStudentData_ctl00_lbldate").innerHTML = text;
+            fnShowTime();
+        }
+
+        function fnShowTime() {
+            var dt = new Date();
+            document.getElementById("lblTime").innerHTML = dt.toLocaleTimeString();
+            window.setTimeout("fnShowTime()", 1000);
+        } $(document).ready(function () { fnShowTime(); });
+        document.getElementById("bus_pass").style.display = "none";
+        document.getElementById("bus_pass_bg").style.display = "none";
+    </script>
+
+</body>
